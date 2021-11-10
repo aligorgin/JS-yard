@@ -1,6 +1,6 @@
 import React, {SetStateAction, useState} from "react";
 
-export default function Pars() {
+export default function Parse() {
 
     const [value, setValue] = useState('')
     const [x, setX] = useState("")
@@ -23,11 +23,11 @@ export default function Pars() {
             const equation: string = addingMultiplyToy.join('');
             const replaceX = equation.replaceAll('x', x);
             const replaceY = replaceX.replaceAll('y', y);
+            console.log(replaceY)
             setAnswer(eval(replaceY))
         }else {
             setAnswer('please fill inputs')
         }
-
     }
 
 
