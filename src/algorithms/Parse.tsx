@@ -6,16 +6,15 @@ export default function Parse() {
     const [x, setX] = useState("")
     const [y, setY] = useState("")
     const [answer, setAnswer] = useState<SetStateAction<number | string>>(0)
-    const [clicked,setClicked] = useState(false)
+    const [clicked, setClicked] = useState(false)
 
     // console.log(eval('2+3'));
-
 
 
     function calculate() {
         if (!value) return;
         setClicked(true)
-        if (x && y && value){
+        if (x && y && value) {
             const transformingPowerInJs = value.replace('^', '**')
             const valueArr = transformingPowerInJs.split('');
             const addingMultiplyToX = valueArr.map(item => item === 'x' ? '*(x)' : item);
@@ -23,9 +22,8 @@ export default function Parse() {
             const equation: string = addingMultiplyToy.join('');
             const replaceX = equation.replaceAll('x', x);
             const replaceY = replaceX.replaceAll('y', y);
-            console.log(replaceY)
             setAnswer(eval(replaceY))
-        }else {
+        } else {
             setAnswer('please fill inputs')
         }
     }

@@ -1,9 +1,11 @@
-import Parse from "../algorithms/parse";
+import Parse from "../algorithms/Parse";
+import SumUp from "../algorithms/SumUp";
 
 export default function App(){
     return(
-        <div className={'bg-red-500'}>
-            <Parse/>
+        <div >
+            {/*<Parse/>*/}
+            <SumUp/>
         </div>
     )
 }

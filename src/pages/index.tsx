@@ -1,6 +1,6 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import Parse from "../algorithms/parse";
+import Parse from "../algorithms/Parse";
 import App from "../ui/App";
 
 const Home: NextPage = () => {
