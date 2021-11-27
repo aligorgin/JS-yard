@@ -25,9 +25,6 @@ export default function SumUp() {
         return numbers.reduce((sum, curNum) => sum + curNum, 0)
     }
 
-    console.log(sumTheseNumbers([10, 10, 10, 3]))
-
-
     return (
         <div>
             open the console
