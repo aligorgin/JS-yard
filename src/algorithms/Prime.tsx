@@ -1,17 +1,26 @@
 export default function Prime() {
 
+    // const isPrime = (n: number) => {
+    //     for (let i = 2; i < n; i++) {
+    //         if (n % i === 0) { // o(n)
+    //             return false
+    //         }
+    //     }
+    //     return true
+    // }
+
+
     const isPrime = (n: number) => {
-        for (let i = 2; i < n; i++) {
-            if (n % i === 0) {
+        for (let i = 2; i < Math.sqrt(n); i++) {
+            if (n % i === 0) { // o(sqrt(n))
                 return false
             }
         }
         return true
     }
 
-    console.log(isPrime(11))
-    console.log(isPrime(12))
-    console.log(isPrime(53))
+
+    console.log(isPrime(45345233))
 
 
     return (
