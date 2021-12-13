@@ -8,11 +8,6 @@ export default function SumUp() {
     //     return result;
     // }
 
-    const sumDown = (n: number) => {
-        return (n / 2) * (1 + n); //o(1)
-    }
-    console.log(sumDown(3))
-
     // const sumTheseNumbers = (numbers: []) => {
     //     let result = 0;
     //     for (const number of numbers) {
@@ -21,9 +16,16 @@ export default function SumUp() {
     //     return result;
     // }
 
+
+    const sumDown = (n: number) => {
+        return (n / 2) * (1 + n); //o(1)
+    }
+
+
     const sumTheseNumbers = (numbers: []) => {
         return numbers.reduce((sum, curNum) => sum + curNum, 0)
     }
+
 
     return (
         <div>

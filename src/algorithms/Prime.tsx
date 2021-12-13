@@ -20,9 +20,6 @@ export default function Prime() {
     }
 
 
-    console.log(isPrime(45345233))
-
-
     return (
         <div>
             open the consolooo
