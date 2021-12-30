@@ -4,16 +4,18 @@ import Fibonacci from "../algorithms/Fibonacci";
 import Prime from "../algorithms/Prime";
 import SmallestNumber from "../algorithms/SmallestNumber";
 import OddEven from "../algorithms/OddEven";
+import IsPowerOfTwo from "../algorithms/IsPowerOfTwo";
 
-export default function App(){
-    return(
-        <div >
+export default function App() {
+    return (
+        <div>
             {/*<Parse/>*/}
             {/*<SumUp/>*/}
             {/*<Fibonacci/>*/}
             {/*<Prime/>*/}
             <SmallestNumber/>
             <OddEven/>
+            <IsPowerOfTwo/>
         </div>
     )
 }
