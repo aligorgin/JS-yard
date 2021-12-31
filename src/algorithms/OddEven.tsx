@@ -5,6 +5,8 @@ export default function OddEven() {
         return n % 2 === 0; // O(1)
     }
 
+    console.log(`is 234 even ? ${isEven(234)}`)
+
     return (
         <div>
             open the conoslooo

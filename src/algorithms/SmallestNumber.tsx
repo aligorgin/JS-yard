@@ -1,6 +1,6 @@
 export default function SmallestNumber() {
 
-    const getMin = (numbers:number[]) => {
+    const getMin = (numbers: number[]) => {
         let currentMin = numbers[0]
         for (const num of numbers) { // O(n)
             if (num < currentMin) {
@@ -10,7 +10,7 @@ export default function SmallestNumber() {
         return currentMin;
     }
 
-    console.log(getMin([3,4,4,5,234,535345345,34534523452345,234523452345,234523452345,1]));
+    console.log(`32,34,1,4,5 which number is lowest number ? ${getMin([32, 34, 1, 4, 5])}`);
 
     return (
         <div>

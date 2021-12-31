@@ -19,6 +19,7 @@ export default function Prime() {
         return true
     }
 
+    console.log(`is 541 prime number ? ${isPrime(541)}`);
 
     return (
         <div>

@@ -6,6 +6,7 @@ import SmallestNumber from "../algorithms/SmallestNumber";
 import OddEven from "../algorithms/OddEven";
 import IsPowerOfTwo from "../algorithms/IsPowerOfTwo";
 import Factorial from "../algorithms/Factorial";
+import Permutations from "../algorithms/Permutations";
 
 export default function App() {
     return (
@@ -17,7 +18,8 @@ export default function App() {
             {/*<SmallestNumber/>*/}
             {/*<OddEven/>*/}
             {/*<IsPowerOfTwo/>*/}
-            <Factorial/>
+            {/*<Factorial/>*/}
+            <Permutations/>
         </div>
     )
 }

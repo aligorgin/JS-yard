@@ -22,10 +22,8 @@ export default function IsPowerOfTwo() {
         return (num & (num - 1)) === 0; //O(1)
     }
 
-    console.log(isPowerOfTwo(4))
-    console.log(isPowerOfTwo(423))
-    console.log(isPowerOfTwo(16))
-    console.log(isPowerOfTwo(1024))
+
+    console.log(`is 20148 power of two ? ${isPowerOfTwo(20148)}`)
 
     return (
         <div>

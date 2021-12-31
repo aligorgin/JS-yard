@@ -8,7 +8,7 @@ export default function Factorial() {
         return result
     }
 
-    console.log(fact(3));
+    console.log(`7! : ${fact(3)}`);
 
 
     return (

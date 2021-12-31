@@ -10,7 +10,7 @@ export default function Fibonacci() {
         return numbers[n]
     }
 
-    console.log(fib(2))
+    console.log(`fibonacci (8) : ${fib(8)}`)
 
     return (
         <div>

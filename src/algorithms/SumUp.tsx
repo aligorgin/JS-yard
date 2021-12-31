@@ -11,7 +11,7 @@ export default function SumUp() {
     // const sumTheseNumbers = (numbers: []) => {
     //     let result = 0;
     //     for (const number of numbers) {
-    //         result += number;  //o(m)
+    //         result += number;  //o(n)
     //     }
     //     return result;
     // }
@@ -22,9 +22,11 @@ export default function SumUp() {
     }
 
 
-    const sumTheseNumbers = (numbers: []) => {
+    const sumTheseNumbers = (numbers: number[]) => {
         return numbers.reduce((sum, curNum) => sum + curNum, 0)
     }
+
+    console.log(`43+43+42+5+6 = ${sumTheseNumbers([43,43,42,5,6])}`)
 
 
     return (
