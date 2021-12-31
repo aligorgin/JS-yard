@@ -5,6 +5,7 @@ import Prime from "../algorithms/Prime";
 import SmallestNumber from "../algorithms/SmallestNumber";
 import OddEven from "../algorithms/OddEven";
 import IsPowerOfTwo from "../algorithms/IsPowerOfTwo";
+import Factorial from "../algorithms/Factorial";
 
 export default function App() {
     return (
@@ -13,9 +14,10 @@ export default function App() {
             {/*<SumUp/>*/}
             {/*<Fibonacci/>*/}
             {/*<Prime/>*/}
-            <SmallestNumber/>
-            <OddEven/>
-            <IsPowerOfTwo/>
+            {/*<SmallestNumber/>*/}
+            {/*<OddEven/>*/}
+            {/*<IsPowerOfTwo/>*/}
+            <Factorial/>
         </div>
     )
 }
