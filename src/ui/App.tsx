@@ -18,7 +18,7 @@ export default function App() {
             {/*<SmallestNumber/>*/}
             {/*<OddEven/>*/}
             {/*<IsPowerOfTwo/>*/}
-            {/*<Factorial/>*/}
+            <Factorial/>
             <Permutations/>
         </div>
     )
