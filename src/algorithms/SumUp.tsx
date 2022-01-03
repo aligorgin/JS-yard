@@ -10,7 +10,7 @@ export default function SumUp() {
 
     // const sumTheseNumbers = (numbers: []) => {
     //     let result = 0;
-    //     for (const number of numbers) {
+    //     for (const number of numbers) { // to go throw all numbers
     //         result += number;  //o(n)
     //     }
     //     return result;

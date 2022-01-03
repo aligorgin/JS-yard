@@ -7,6 +7,7 @@ import OddEven from "../algorithms/OddEven";
 import IsPowerOfTwo from "../algorithms/IsPowerOfTwo";
 import Factorial from "../algorithms/Factorial";
 import Permutations from "../algorithms/Permutations";
+import KnapsackProblem from "../algorithms/KnapsackProblem";
 
 export default function App() {
     return (
@@ -19,7 +20,8 @@ export default function App() {
             {/*<OddEven/>*/}
             {/*<IsPowerOfTwo/>*/}
             {/*<Factorial/>*/}
-            <Permutations/>
+            {/*<Permutations/>*/}
+            <KnapsackProblem/>
         </div>
     )
 }
