@@ -20,12 +20,11 @@ export default function KnapsackProblem() {
         let resultSack;
 
         if (valueWithItem > valueWithoutItem) {
-            const updatedSack = {
+            resultSack = {
                 items: sackWithItem.items.concat(items[itemIndex]),
                 value: sackWithItem.value + items[itemIndex].value,
                 weight: sackWithItem.weight + items[itemIndex].weight,
             };
-            resultSack = updatedSack;
         } else {
             resultSack = sackWithoutItem;
         }
@@ -36,7 +35,7 @@ export default function KnapsackProblem() {
     }
 
     const knapsack = (items: any, cap: number, index: number) => {
-        const mem = Array(cap + 1).fill(Array(items.length)).fill(undefined);
+        const mem = Array(cap + 1).fill(Array(items.length).fill(undefined));
         return knapsackFn(items, cap, index, mem);
     }
 
