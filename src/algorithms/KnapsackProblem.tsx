@@ -1,10 +1,13 @@
 export default function KnapsackProblem() {
 
+    // time complexity without memoization : O(2^n)
+    // time complexity with memoization : O(n*C)
+
     const knapsackFn: any = (items: any, cap: number, itemIndex: number, memo: any) => {
         console.log('Running');
-        if (memo[cap][itemIndex]) {
+        if (memo[cap][itemIndex]) { //
             return memo[cap][itemIndex];
-        }
+        } //
         if (cap === 0 || itemIndex < 0) {
             return {items: [], value: 0, weight: 0};
         }
