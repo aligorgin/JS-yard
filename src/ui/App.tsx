@@ -15,7 +15,7 @@ export default function App() {
         <div>
             {/*<Parse/>*/}
             {/*<SumUp/>*/}
-            {/*<Fibonacci/>*/}
+            <Fibonacci/>
             {/*<Prime/>*/}
             {/*<SmallestNumber/>*/}
             {/*<OddEven/>*/}
@@ -23,7 +23,7 @@ export default function App() {
             {/*<Factorial/>*/}
             {/*<Permutations/>*/}
             {/*<KnapsackProblem/>*/}
-            <ComputeChange/>
+            {/*<ComputeChange/>*/}
         </div>
     )
 }
