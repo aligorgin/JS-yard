@@ -11,14 +11,42 @@ export default function Fibonacci() {
     // }
 
     // recursive
-    const fib: any = (num: number) => {
-        if (num === 0 || num === 1) {
-            return 1;
+    // const fib: any = (num: number) => {
+    //     if (num === 0 || num === 1) {
+    //         return 1;
+    //     }
+    //     return fib(num - 1) + fib(num - 2); // O(n^2) not good solution for this problem
+    // }
+
+    // recursive + memo
+    let counter = 0;
+    const fib: any = (n: number, memo: any) => {
+        counter++;
+        let result;
+
+        if (memo[n]) {
+            return memo[n];
         }
-        return fib(num - 1) + fib(num - 2); // O(n^2) not good solution for this problem
+        if (n === 0 || n === 1) {
+            result = 1;
+        } else {
+            result = fib(n - 1, memo) + fib(n - 2, memo); //O(n)
+        }
+
+        memo[n] = result;
+
+        return result;
     }
 
-    console.log(`fibonacci (8) : ${fib(8)}`)
+    console.log(`fibonacci (8) : ${fib(8,{})}`);
+    console.log(counter);
+    counter =0;
+    console.log(`fibonacci (8) : ${fib(80,{})}`);
+    console.log(counter);
+    counter =0;
+    console.log(`fibonacci (8) : ${fib(800,{})}`);
+    console.log(counter);
+    counter =0;
 
     return (
         <div>
