@@ -45,6 +45,8 @@ export default function Fibonacci() {
     console.log(counter);
     counter = 0;
 
+
+
     return (
         <div>
             open the console
