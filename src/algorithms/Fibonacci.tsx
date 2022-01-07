@@ -44,9 +44,6 @@ export default function Fibonacci() {
     console.log(`fibonacci (8) : ${fib(80,{})}`);
     console.log(counter);
     counter =0;
-    console.log(`fibonacci (8) : ${fib(800,{})}`);
-    console.log(counter);
-    counter =0;
 
     return (
         <div>
