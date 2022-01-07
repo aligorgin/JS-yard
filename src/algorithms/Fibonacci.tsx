@@ -38,12 +38,12 @@ export default function Fibonacci() {
         return result;
     }
 
-    console.log(`fibonacci (8) : ${fib(8,{})}`);
+    console.log(`fibonacci (8) : ${fib(8, {})}`);
     console.log(counter);
-    counter =0;
-    console.log(`fibonacci (8) : ${fib(80,{})}`);
+    counter = 0;
+    console.log(`fibonacci (8) : ${fib(80, {})}`);
     console.log(counter);
-    counter =0;
+    counter = 0;
 
     return (
         <div>
