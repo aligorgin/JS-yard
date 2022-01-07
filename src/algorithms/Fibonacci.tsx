@@ -41,7 +41,10 @@ export default function Fibonacci() {
     console.log(`fibonacci (8) : ${fib(8, {})}`);
     console.log(counter);
     counter = 0;
-    console.log(`fibonacci (8) : ${fib(80, {})}`);
+    console.log(`fibonacci (80) : ${fib(80, {})}`);
+    console.log(counter);
+    counter = 0;
+    console.log(`fibonacci (30) : ${fib(30, {})}`);
     console.log(counter);
     counter = 0;
 
