@@ -9,13 +9,15 @@ import Factorial from "../algorithms/Factorial";
 import Permutations from "../algorithms/Permutations";
 import KnapsackProblem from "../algorithms/KnapsackProblem";
 import ComputeChange from "../algorithms/ComputeChange";
+import BinarySearch from "../algorithms/BinarySearch";
+import LinearSearch from "../algorithms/LinearSearch";
 
 export default function App() {
     return (
         <div>
             {/*<Parse/>*/}
             {/*<SumUp/>*/}
-            <Fibonacci/>
+            {/*<Fibonacci/>*/}
             {/*<Prime/>*/}
             {/*<SmallestNumber/>*/}
             {/*<OddEven/>*/}
@@ -24,6 +26,8 @@ export default function App() {
             {/*<Permutations/>*/}
             {/*<KnapsackProblem/>*/}
             {/*<ComputeChange/>*/}
+            {/*<BinarySearch/>*/}
+            <LinearSearch/>
         </div>
     )
 }
