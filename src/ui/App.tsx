@@ -11,6 +11,7 @@ import KnapsackProblem from "../algorithms/KnapsackProblem";
 import ComputeChange from "../algorithms/ComputeChange";
 import BinarySearch from "../algorithms/BinarySearch";
 import LinearSearch from "../algorithms/LinearSearch";
+import RecursiveBinarySearch from "../algorithms/RecursiveBinarySearch";
 
 export default function App() {
     return (
@@ -27,7 +28,8 @@ export default function App() {
             {/*<KnapsackProblem/>*/}
             {/*<ComputeChange/>*/}
             {/*<BinarySearch/>*/}
-            <LinearSearch/>
+            {/*<LinearSearch/>*/}
+            <RecursiveBinarySearch/>
         </div>
     )
 }

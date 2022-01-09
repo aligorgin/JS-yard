@@ -17,7 +17,7 @@ export default function LinearSearch() {
     }
 
     const arr = [2, 4, 5, 7, 13, 15, 17, 33, 77, 86, 100, 121];
-    console.log(findElement(arr, 100));
+    console.log(findElement(arr, 7));
 
     const objects = [
         {name: 'ali', age: 23},
