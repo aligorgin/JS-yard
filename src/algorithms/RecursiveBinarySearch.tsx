@@ -16,7 +16,7 @@ export default function RecursiveBinarySearch() {
         } else {
             endIndex = middleIndex - 1;
         }
-        return findElement(sortedArr.slice(startIndex, endIndex + 1), element, offset)
+        return findElement(sortedArr.slice(startIndex, endIndex + 1), element, offset) // O(log n)
     }
     const arr = [2, 4, 5, 7, 13, 15, 17, 33, 77, 86, 100, 121];
     console.log(findElement(arr, 7, 0))

@@ -12,6 +12,7 @@ import ComputeChange from "../algorithms/ComputeChange";
 import BinarySearch from "../algorithms/BinarySearch";
 import LinearSearch from "../algorithms/LinearSearch";
 import RecursiveBinarySearch from "../algorithms/RecursiveBinarySearch";
+import CartesianProduct from "../algorithms/CartesianProduct";
 
 export default function App() {
     return (
@@ -29,7 +30,8 @@ export default function App() {
             {/*<ComputeChange/>*/}
             {/*<BinarySearch/>*/}
             {/*<LinearSearch/>*/}
-            <RecursiveBinarySearch/>
+            {/*<RecursiveBinarySearch/>*/}
+            <CartesianProduct/>
         </div>
     )
 }
