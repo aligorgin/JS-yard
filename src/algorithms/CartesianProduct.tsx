@@ -14,7 +14,7 @@ export default function CartesianProduct() {
 
     const cartesian = (...sets: any[]) => {
         let tempProduct = sets[0];
-        for (let i = 1; i < sets.length; i++) {
+        for (let i = 1; i < sets.length; i++) { // O(n^x) x is sets
             tempProduct = cartProduct(tempProduct, sets[i]);
         }
         return tempProduct
