@@ -21,7 +21,7 @@ export default function CartesianProduct() {
     }
 
     const colors = ['blue', 'red'];
-    const sizes = ['m', 'l', 'xl', 's', 'lg'];
+    const sizes = ['m', 'l', 'xl'];
     const styles = ['round neck', 'v neck'];
     console.log(cartProduct(colors, sizes));
     console.log(cartesian(colors, sizes, styles));
