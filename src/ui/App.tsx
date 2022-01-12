@@ -14,6 +14,9 @@ import LinearSearch from "../algorithms/LinearSearch";
 import RecursiveBinarySearch from "../algorithms/RecursiveBinarySearch";
 import CartesianProduct from "../algorithms/CartesianProduct";
 import PermutationsWithRep from "../algorithms/PermutationsWithRep";
+import BubbleSort from "../algorithms/BubbleSort";
+import QuickSort from "../algorithms/QuickSort";
+import MergeSort from "../algorithms/MergeSort";
 
 export default function App() {
     return (
@@ -27,13 +30,16 @@ export default function App() {
             {/*<IsPowerOfTwo/>*/}
             {/*<Factorial/>*/}
             {/*<Permutations/>*/}
-            <PermutationsWithRep/>
+            {/*<PermutationsWithRep/>*/}
             {/*<KnapsackProblem/>*/}
             {/*<ComputeChange/>*/}
             {/*<BinarySearch/>*/}
             {/*<LinearSearch/>*/}
             {/*<RecursiveBinarySearch/>*/}
             {/*<CartesianProduct/>*/}
+            {/*<BubbleSort/>*/}
+            {/*<QuickSort/>*/}
+            <MergeSort/>
         </div>
     )
 }
