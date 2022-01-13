@@ -1,6 +1,7 @@
 export default function QuickSort() {
     const sort: any = (arr: number[] | string[] | (number | string)[]) => {
         const copiedArray = [...arr];
+        console.log('fn started',copiedArray)
 
         if (copiedArray.length <= 1) {
             return copiedArray;
@@ -21,6 +22,7 @@ export default function QuickSort() {
                 biggerElementsArray.push(currentElement);
             }
         }
+        console.log('after while loop',smallerElementsArray,biggerElementsArray)
 
         const smallerElementsSortedArray = sort(smallerElementsArray);
         const biggerElementsSortedArray = sort(biggerElementsArray);
