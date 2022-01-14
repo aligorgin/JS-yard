@@ -1,4 +1,4 @@
-import Parse from "../algorithms/Parse";
+import Equation from "../algorithms/Equation";
 import SumUp from "../algorithms/SumUp";
 import Fibonacci from "../algorithms/Fibonacci";
 import Prime from "../algorithms/Prime";
@@ -21,7 +21,7 @@ import MergeSort from "../algorithms/MergeSort";
 export default function App() {
     return (
         <div>
-            {/*<Parse/>*/}
+            {/*<Equation/>*/}
             {/*<SumUp/>*/}
             {/*<Fibonacci/>*/}
             {/*<Prime/>*/}

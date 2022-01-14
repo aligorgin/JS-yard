@@ -1,6 +1,6 @@
 import React, {SetStateAction, useState} from "react";
 
-export default function Parse() {
+export default function Equation() {
 
     const [value, setValue] = useState('')
     const [x, setX] = useState("")
