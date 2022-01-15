@@ -17,6 +17,7 @@ import PermutationsWithRep from "../algorithms/PermutationsWithRep";
 import BubbleSort from "../algorithms/BubbleSort";
 import QuickSort from "../algorithms/QuickSort";
 import MergeSort from "../algorithms/MergeSort";
+import Loops from "../js/Loops";
 
 export default function App() {
     return (
@@ -39,7 +40,8 @@ export default function App() {
             {/*<CartesianProduct/>*/}
             {/*<BubbleSort/>*/}
             {/*<QuickSort/>*/}
-            <MergeSort/>
+            {/*<MergeSort/>*/}
+            <Loops/>
         </div>
     )
 }
