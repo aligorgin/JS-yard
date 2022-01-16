@@ -18,6 +18,7 @@ import BubbleSort from "../algorithms/BubbleSort";
 import QuickSort from "../algorithms/QuickSort";
 import MergeSort from "../algorithms/MergeSort";
 import Loops from "../js/Loops";
+import Scope from "../js/Scope";
 
 export default function App() {
     return (
@@ -41,7 +42,8 @@ export default function App() {
             {/*<BubbleSort/>*/}
             {/*<QuickSort/>*/}
             {/*<MergeSort/>*/}
-            <Loops/>
+            {/*<Loops/>*/}
+            <Scope/>
         </div>
     )
 }
