@@ -12,6 +12,9 @@ export default function Scope() {
         console.log(food)
     }
 
+    food = 'pasta'
+
+    // dont ever use 'var'
     store();
     console.log(food)
 
