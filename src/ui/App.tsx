@@ -19,6 +19,7 @@ import QuickSort from "../algorithms/QuickSort";
 import MergeSort from "../algorithms/MergeSort";
 import Loops from "../js/Loops";
 import Scope from "../js/Scope";
+import AppTik from '../tik/App';
 
 export default function App() {
     return (
@@ -44,6 +45,7 @@ export default function App() {
             {/*<MergeSort/>*/}
             {/*<Loops/>*/}
             {/*<Scope/>*/}
+            <AppTik/>
         </div>
     )
 }
