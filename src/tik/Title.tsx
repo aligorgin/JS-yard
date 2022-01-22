@@ -16,10 +16,6 @@ export default function Title() {
         setArr((prevState: any[]) => [...prevState, text]);
     }
 
-    useEffect(() => {
-        console.log(arr)
-    }, [arr])
-
     return (
         <div className='w-full h-screen bg-slate-900'>
             <div className='max-w-[22rem] h-screen mx-auto pt-7'>
@@ -27,7 +23,7 @@ export default function Title() {
                     <div className='flex'>
                         <input
                             onChange={handleChange}
-                            className='p-2 w-4/5 focus:outline-none bg-slate-700 focus:bg-slate-500 transition rounded-md mr-5'
+                            className='text-white p-2 w-4/5 focus:outline-none bg-slate-700 focus:bg-slate-500 transition rounded-md mr-5'
                             type="text"
                             value={text}
                         />
