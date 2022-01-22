@@ -1,9 +1,10 @@
 import {PlusIcon} from "@heroicons/react/solid";
-import {useState} from "react";
+import {SetStateAction, useEffect, useState} from "react";
+import Rows from "./Rows";
 
 export default function Title() {
-    const [text, setText] = useState('');
-    const arr: any[] = [];
+    const [text, setText] = useState<string | number | readonly string[] | undefined>('');
+    const [arr, setArr] = useState<any[]>([]);
 
     const handleChange = (e: any) => {
         setText(e.target.value);
@@ -12,13 +13,16 @@ export default function Title() {
     const handleSubmit = (e: any) => {
         e.preventDefault();
         setText('');
-        arr.push(text);
-        console.log(arr)
+        setArr((prevState: any[]) => [...prevState, text]);
     }
+
+    useEffect(() => {
+        console.log(arr)
+    }, [arr])
 
     return (
         <div className='w-full h-screen bg-slate-900'>
-            <div className='max-w-[22rem] h-full mx-auto pt-7'>
+            <div className='max-w-[22rem] h-screen mx-auto pt-7'>
                 <form onSubmit={handleSubmit}>
                     <div className='flex'>
                         <input
@@ -33,6 +37,7 @@ export default function Title() {
                         </button>
                     </div>
                 </form>
+                <Rows arr={arr}/>
             </div>
         </div>
 
