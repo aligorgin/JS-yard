@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {SetStateAction, useState} from "react";
 import clsx from "clsx";
 
 interface Props {
@@ -7,21 +7,23 @@ interface Props {
 
 export default function Rows({arr}: Props) {
     const [checked, setChecked] = useState<any>(false);
-
-    console.log(checked)
+    // const [selectedIndex, setSelectedIndex] = useState<SetStateAction<number | null>>(null);
 
     return (
         <div className='mt-4'>
             {arr.map((value: string | number, index: number) => {
                 return (
                     <div
-                        onClick={() => {
-                            console.log(index)
-                        }}
+                        key={index}
+                        // onClick={() => {
+                        //     setSelectedIndex(index);
+                        //     console.log('index',index,'selected index:',selectedIndex)
+                        // }}
                         className={clsx('flex items-center text-white py-2 px-4 bg-slate-700 rounded-lg mb-2', checked && 'underline text-opacity-40')}
-                        key={index}>
+                        >
                         <input className='mr-3' type="checkbox" value={checked} onClick={() => {
                             setChecked(!checked)
+                            console.log('index',index,'clicked')
                         }}/>
                         <div className=''>{value}</div>
                     </div>
