@@ -13,7 +13,9 @@ export default function Title() {
     const handleSubmit = (e: any) => {
         e.preventDefault();
         setText('');
-        setArr((prevState: any[]) => [...prevState, text]);
+        if(text !==''){
+            setArr((prevState: any[]) => [...prevState, text]);
+        }
     }
 
     return (
