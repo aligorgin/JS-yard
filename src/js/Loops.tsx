@@ -9,6 +9,12 @@ export default function Loops() {
         console.log('each', index, name)
     })
 
+    let i = 0
+    while (i < 10) {
+        console.log(names[3]);
+        i += 2;
+    }
+
 
     return (
         <div>
