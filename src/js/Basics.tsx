@@ -1,10 +1,12 @@
 export default function Basics() {
     const text = 'hey';
-    const text2 = 'wasap'
+    const text2 = 'wasap';
+    // console.log(`${text} ${text2}`)
 
     const a = 'hello';
     const b = 42;
     const c = {d: [true, false]}
+    // console.log({a,b,c});
 
     const makeAdder = (x: number) => {
         return (y: number) => {
