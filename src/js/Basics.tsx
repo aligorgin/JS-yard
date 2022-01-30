@@ -15,6 +15,8 @@ export default function Basics() {
     }
     let add3 = makeAdder(3);
     let add7 = makeAdder(7);
+    // console.log(add3(4));
+    // console.log(add7(4));
 
     // The Module Pattern
     const makeWithdraw = (balance: number) => ((copyBalance) => {
