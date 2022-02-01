@@ -48,13 +48,13 @@ export default function Basics() {
             privateCounter += val;
         }
         return {
-            increasment: ()=>{
+            increasment: () => {
                 changeBy(1);
             },
-            decreasment:()=>{
+            decreasment: () => {
                 changeBy(-1)
             },
-            value:()=>{
+            value: () => {
                 return privateCounter;
             }
         }
@@ -69,6 +69,46 @@ export default function Basics() {
     // counter2.increasment();
     // console.log(counter1.value())
     // console.log(counter2.value())
+
+    // creating closures in loops
+    // const showHelp = (help: string) => {
+    //     document.getElementById('help').textContent = help;
+    // }
+    // const makeHelpCallback = (help) => {
+    //     return () => {
+    //         showHelp(help)
+    //     }
+    // }
+    // const setupHelp = () => {
+    //     let helpText = [
+    //         {'id': 'email', 'help': 'your e-mail address'},
+    //         {'id': 'name', 'help': 'your full name'},
+    //         {'id': 'age', 'help': 'your age (you must be over 18)'},
+    //     ];
+    //     for (let i = 0; i < helpText.length; i++) {
+    //         let item = helpText[i];
+    //         document.getElementById(item.id).onfocus = makeHelpCallback(item.help);
+    //     }
+    // }
+    // setupHelp();
+
+
+    // for (let i = 6; i < 363; i += 13) {
+    //     console.log(`${i}-${i + 13}`)
+    // }
+
+    // PRIME
+    // const isPrime = (element: number, index: number, array: number[]) => {
+    //     let start = 2;
+    //     while (start <= Math.sqrt(element)) {
+    //         if (element % start++ < 1) {
+    //             return false;
+    //         }
+    //     }
+    //     return element > 1;
+    // }
+    // console.log([4, 3, 4, 5, 7, 11].find(isPrime));
+
 
     return (
         <div>
