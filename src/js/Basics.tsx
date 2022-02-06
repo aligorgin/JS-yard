@@ -109,6 +109,11 @@ export default function Basics() {
     // }
     // console.log([4, 3, 4, 5, 7, 11].find(isPrime));
 
+    // when we using `let` ,it will be trapped inside of the loop, and can't be returned.
+    for (let i = 0; i < 10; i++) {
+        console.log(i)
+    }
+
 
     return (
         <div>
