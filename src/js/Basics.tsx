@@ -126,6 +126,21 @@ export default function Basics() {
     //     return thing
     // }
 
+    // flat array
+    const concatArrays = () => {
+        const arr = [8, 9, [6, [5, [7], [45, 34, [[[2]]], [[[[[[[[7]]]]], 90]]]]]]];
+        const flatter: any = (arg: any[]) => {
+            return arg.reduce((acc, item) => {
+                if (Array.isArray(item)) {
+                    return [...acc, ...flatter(item)]
+                }
+                return [...acc, item]
+            }, [])
+        }
+        return flatter(arr);
+
+    }
+
 
     return (
         <div>
