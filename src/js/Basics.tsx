@@ -145,8 +145,10 @@ export default function Basics() {
     const removeDuplicates = () => {
         const arr = [6, 8, 3, 9, 6, 5, 8, 2, 3, 9, 7, 7, 2, 1, 0, 8];
         const uniqueArr = arr.filter((elem, index) => arr.indexOf(elem) === index);
-        const set = new Set(arr)
-        const uniqueArrWithSet = Array.from(set)
+        const set = new Set(arr);
+         // Array.from make it to like Array instead of object
+        const uniqueArrWithSet = Array.from(set);
+
 
         return uniqueArrWithSet
     }
