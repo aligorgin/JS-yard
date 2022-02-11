@@ -153,6 +153,21 @@ export default function Basics() {
         return uniqueArrWithSet
     }
 
+    // promises
+    const promise1 = Promise.resolve('hello');
+
+    let promise2 = promise1.then((result)=>{
+        console.log(result)
+    },(error)=>{
+        console.log(error)}// this just handle error of promise 1 not the sibling one
+    ).then((result)=>{
+        // this one will trigger if the previous then method have a return statement
+        console.log(result)
+    }).catch((error)=>{
+        // this will trigger if there was any error of these chain promises
+        console.log(error)
+    })
+
 
     return (
         <div>
