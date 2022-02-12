@@ -146,7 +146,7 @@ export default function Basics() {
         const arr = [6, 8, 3, 9, 6, 5, 8, 2, 3, 9, 7, 7, 2, 1, 0, 8];
         const uniqueArr = arr.filter((elem, index) => arr.indexOf(elem) === index);
         const set = new Set(arr);
-         // Array.from make it to like Array instead of object
+        // Array.from make it to like Array instead of object
         const uniqueArrWithSet = Array.from(set);
 
 
@@ -155,18 +155,31 @@ export default function Basics() {
 
     // promises
     const promise1 = Promise.resolve('hello');
-
-    let promise2 = promise1.then((result)=>{
-        console.log(result)
-    },(error)=>{
-        console.log(error)}// this just handle error of promise 1 not the sibling one
-    ).then((result)=>{
+    let promise2 = promise1.then((result) => {
+            console.log(result)
+        }, (error) => {
+            console.log(error)
+        }// this just handle error of promise 1 not the sibling one
+    ).then((result) => {
         // this one will trigger if the previous then method have a return statement
         console.log(result)
-    }).catch((error)=>{
+    }).catch((error) => {
         // this will trigger if there was any error of these chain promises
         console.log(error)
     })
+
+    // promise
+    const timeout = (duration: number = 0, shouldFail: boolean = false) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (shouldFail) {
+                    reject(`timeout rejected in ${duration}ms`)
+                } else {
+                    resolve(`timeout resolved in ${duration}ms`)
+                }
+            }, duration)
+        })
+    }
 
 
     return (
