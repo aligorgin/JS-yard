@@ -1,3 +1,7 @@
+import {constants} from "os";
+import EROFS = module
+import {log} from "util";
+
 export default function Basics() {
     const text = 'hey';
     const text2 = 'wasap';
@@ -154,19 +158,19 @@ export default function Basics() {
     }
 
     // promises
-    const promise1 = Promise.resolve('hello');
-    let promise2 = promise1.then((result) => {
-            console.log(result)
-        }, (error) => {
-            console.log(error)
-        }// this just handle error of promise 1 not the sibling one
-    ).then((result) => {
-        // this one will trigger if the previous then method have a return statement
-        console.log(result)
-    }).catch((error) => {
-        // this will trigger if there was any error of these chain promises
-        console.log(error)
-    })
+    // const promise1 = Promise.resolve('hello');
+    // let promise2 = promise1.then((result) => {
+    //         console.log(result)
+    //     }, (error) => {
+    //         console.log(error)
+    //     }// this just handle error of promise 1 not the sibling one
+    // ).then((result) => {
+    //     // this one will trigger if the previous then method have a return statement
+    //     console.log(result)
+    // }).catch((error) => {
+    //     // this will trigger if there was any error of these chain promises
+    //     console.log(error)
+    // })
 
     // promise
     const timeout = (duration: number = 0, shouldFail: boolean = false) => {
@@ -180,6 +184,54 @@ export default function Basics() {
             }, duration)
         })
     }
+
+    // async await
+    const doAsync = (rejectPromise: boolean = false) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (rejectPromise) {
+                    reject('rejected')
+                } else {
+                    resolve('resolved')
+                }
+            })
+        })
+    }
+
+    const resolve = async () => {
+        const result = await doAsync();
+        console.log(result) // should be resolved
+    }
+    const reject = async () => {
+        try {
+            const result = await doAsync(true);
+            throw new Error('this should not run')
+        } catch (error) {
+            console.error(error) //should be rejected
+        }
+    }
+
+    // resolve();
+    // reject();
+
+    // object.entries
+    const objectEntries = () => {
+        const object = {
+            a: 'a value',
+            b: 'b value',
+            c: {
+                d: true,
+                e: {
+                    f: 'f value',
+                }
+            }
+        }
+        Object.entries(object).forEach(([key,value])=>{
+            console.log(key, value)
+        })
+        // return Object.values(object)
+    }
+    console.log(objectEntries());
 
 
     return (
