@@ -1,7 +1,3 @@
-import {constants} from "os";
-import EROFS = module
-import {log} from "util";
-
 export default function Basics() {
     const text = 'hey';
     const text2 = 'wasap';
