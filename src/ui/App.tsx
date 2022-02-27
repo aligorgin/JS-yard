@@ -17,10 +17,10 @@ import PermutationsWithRep from "../algorithms/PermutationsWithRep";
 import BubbleSort from "../algorithms/BubbleSort";
 import QuickSort from "../algorithms/QuickSort";
 import MergeSort from "../algorithms/MergeSort";
-import Loops from "../js/Loops";
-import Scope from "../js/Scope";
+import Loops from "../codes/Loops";
+import Scope from "../codes/Scope";
 import AppTik from '../tik/App';
-import Basics from "../js/Basics";
+import Basics from "../codes/Basics";
 
 export default function App() {
     return (

@@ -229,6 +229,24 @@ export default function Basics() {
     }
     console.log(objectEntries());
 
+    // we have a number
+    // we calculate 3 percentage of that
+    // add the 3 percentage of that to initial value
+    // loop this for 365 times
+    const add3PercentageToValue = () => {
+        let x = 100;
+        let y = 0;
+        for (let i = 1; i < 3; i++) {
+            y = (x * 3) / 100;
+            x = x + y;
+        }
+        console.log(x,y)
+    }
+    // (100 * 3) / 100 = 3
+    // (103 * 3 ) / 100 = 3.09
+    // (106.3 * 3 ) / 100 = y
+    add3PercentageToValue();
+
 
     return (
         <div>
