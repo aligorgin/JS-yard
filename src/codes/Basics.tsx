@@ -233,6 +233,9 @@ export default function Basics() {
     // we calculate 3 percentage of that
     // add the 3 percentage of that to initial value
     // loop this for 365 times
+    // (100 * 3) / 100 = 3
+    // (103 * 3 ) / 100 = 3.09
+    // (106.3 * 3 ) / 100 = y
     const add3PercentageToValue = () => {
         let x = 100;
         let y = 0;
@@ -242,10 +245,11 @@ export default function Basics() {
         }
         console.log(x,y)
     }
-    // (100 * 3) / 100 = 3
-    // (103 * 3 ) / 100 = 3.09
-    // (106.3 * 3 ) / 100 = y
     add3PercentageToValue();
+
+    let arr = [1, 2, "b", 0, {}, "", NaN, 3, undefined, null, 5];
+
+    let testTheFilterBoolean = arr.filter(Boolean);  // [1, 2, "b", {}, 3, 5];
 
 
     return (
