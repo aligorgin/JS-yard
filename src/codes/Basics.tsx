@@ -247,9 +247,11 @@ export default function Basics() {
     }
     add3PercentageToValue();
 
-    let arr = [1, 2, "b", 0, {}, "", NaN, 3, undefined, null, 5];
+    let arr = [1, 2, "b", 0, {}, "", NaN, 3, undefined, null, 5,'4'];
 
     let testTheFilterBoolean = arr.filter(Boolean);  // [1, 2, "b", {}, 3, 5];
+
+    const arrWithNumbers = arr.filter(Number);
 
 
     return (
