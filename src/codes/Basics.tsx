@@ -1,3 +1,5 @@
+import {element} from "prop-types";
+
 export default function Basics() {
     const text = 'hey';
     const text2 = 'wasap';
@@ -222,7 +224,7 @@ export default function Basics() {
                 }
             }
         }
-        Object.entries(object).forEach(([key,value])=>{
+        Object.entries(object).forEach(([key, value]) => {
             console.log(key, value)
         })
         // return Object.values(object)
@@ -243,16 +245,16 @@ export default function Basics() {
             y = (x * 3) / 100;
             x = x + y;
         }
-        console.log(x,y)
+        console.log(x, y)
     }
     add3PercentageToValue();
 
-    let arr = [1, 2, "b", 0, {}, "", NaN, 3, undefined, null, 5,'4'];
-
+    let arr = [1, 2, "b", 0, {}, "", NaN, 3, undefined, null, 5, '4'];
     let testTheFilterBoolean = arr.filter(Boolean);  // [1, 2, "b", {}, 3, 5];
-
     const arrWithNumbers = arr.filter(Number);
 
+    const arr2 = [3, 45, 32, 5, 6, 456, 345];
+    console.log(arr2.findIndex((el)=>el>13))
 
     return (
         <div>
