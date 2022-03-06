@@ -254,7 +254,8 @@ export default function Basics() {
     const arrWithNumbers = arr.filter(Number);
 
     const arr2 = [3, 45, 32, 5, 6, 456, 345];
-    console.log(arr2.findIndex((el)=>el>13))
+    console.log(arr2.findIndex((el) => el > 13))
+    console.log(arr.concat(arr2))
 
     return (
         <div>
