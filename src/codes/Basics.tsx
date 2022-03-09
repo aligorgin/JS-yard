@@ -259,6 +259,8 @@ export default function Basics() {
     console.log(arr2.fill(0,3,4))
     console.log(arr2.fill(0,4))
     console.log(arr2.fill(0,))
+    console.log(arr.join())
+    console.log(arr2.join(''))
 
     return (
         <div>
