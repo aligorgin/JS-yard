@@ -1,4 +1,4 @@
-import {element} from "prop-types";
+import {useReducer} from "react";
 
 export default function Basics() {
     const text = 'hey';
@@ -256,15 +256,43 @@ export default function Basics() {
     const arr2 = [3, 45, 32, 5, 6, 456, 345];
     console.log(arr2.findIndex((el) => el > 13))
     console.log(arr.concat(arr2))
-    console.log(arr2.fill(0,3,4))
-    console.log(arr2.fill(0,4))
+    console.log(arr2.fill(0, 3, 4))
+    console.log(arr2.fill(0, 4))
     console.log(arr2.fill(0,))
     console.log(arr.join())
-    console.log(arr2.join(''))
+    console.log(arr2.join(''));
 
+    const initialState = {count: 0};
+
+    const reducer = (state: { count: number; }, action: { type: any; }) => {
+        switch (action.type) {
+            case "increment":
+                return {count: state.count + 1}
+            case 'decrement':
+                return {count: state.count - 1}
+            default:
+                throw new Error(`Unsupported action type:${action.type}`);
+        }
+    }
+    const [state, dispatch] = useReducer(reducer, initialState);
     return (
         <div>
-            open consolo
+            open consolo and
+            <div>
+                count: {state.count}
+
+                <button onClick={() => {
+                    dispatch({type: 'decrement'})
+                }}>
+                    -
+                </button>
+
+                <button onClick={() => {
+                    dispatch({type: 'increment'})
+                }}>
+                    +
+                </button>
+            </div>
         </div>
     )
 }
