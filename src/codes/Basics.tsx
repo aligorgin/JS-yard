@@ -1,4 +1,4 @@
-import {useReducer} from "react";
+import {useReducer, useState} from "react";
 
 export default function Basics() {
     const text = 'hey';
@@ -24,7 +24,7 @@ export default function Basics() {
     const makeWithdraw = (balance: number) => ((copyBalance) => {
         let balance = copyBalance;
         let doBadThings = () => {
-            console.log('i will do bad thing with ur money')
+            // console.log('i will do bad thing with ur money')
         };
         doBadThings();
         return {
@@ -198,7 +198,7 @@ export default function Basics() {
 
     const resolve = async () => {
         const result = await doAsync();
-        console.log(result) // should be resolved
+        // console.log(result) // should be resolved
     }
     const reject = async () => {
         try {
@@ -225,11 +225,11 @@ export default function Basics() {
             }
         }
         Object.entries(object).forEach(([key, value]) => {
-            console.log(key, value)
+            // console.log(key, value)
         })
         // return Object.values(object)
     }
-    console.log(objectEntries());
+    // console.log(objectEntries());
 
     // we have a number
     // we calculate 3 percentage of that
@@ -245,7 +245,7 @@ export default function Basics() {
             y = (x * 3) / 100;
             x = x + y;
         }
-        console.log(x, y)
+        // console.log(x, y)
     }
     add3PercentageToValue();
 
@@ -254,13 +254,13 @@ export default function Basics() {
     const arrWithNumbers = arr.filter(Number);
 
     const arr2 = [3, 45, 32, 5, 6, 456, 345];
-    console.log(arr2.findIndex((el) => el > 13))
-    console.log(arr.concat(arr2))
-    console.log(arr2.fill(0, 3, 4))
-    console.log(arr2.fill(0, 4))
-    console.log(arr2.fill(0,))
-    console.log(arr.join())
-    console.log(arr2.join(''));
+    // console.log(arr2.findIndex((el) => el > 13))
+    // console.log(arr.concat(arr2))
+    // console.log(arr2.fill(0, 3, 4))
+    // console.log(arr2.fill(0, 4))
+    // console.log(arr2.fill(0,))
+    // console.log(arr.join())
+    // console.log(arr2.join(''));
 
     const initialState = {count: 0};
 
@@ -275,8 +275,18 @@ export default function Basics() {
         }
     }
     const [state, dispatch] = useReducer(reducer, initialState);
+
+    const [show, setShow] = useState(false);
+
+    const displayName = () => {
+        setShow(prevState => !prevState);
+    }
     return (
         <div>
+            <div>
+                <button className='p-4 bg-amber-200 rounded-2xl m-2' onClick={displayName}>click me to show ur name </button>
+                <span>{show ? 'ali ' : ''}</span>
+            </div>
             open consolo and
             <div>
                 count: {state.count}

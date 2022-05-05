@@ -19,7 +19,7 @@ import QuickSort from "../algorithms/QuickSort";
 import MergeSort from "../algorithms/MergeSort";
 import Loops from "../codes/Loops";
 import Scope from "../codes/Scope";
-import AppTik from '../tik/App';
+import AppTik from '../TodoProject/App';
 import Basics from "../codes/Basics";
 
 export default function App() {
@@ -46,8 +46,8 @@ export default function App() {
             {/*<MergeSort/>*/}
             {/*<Loops/>*/}
             {/*<Scope/>*/}
-            {/*<AppTik/>*/}
-            <Basics/>
+            <AppTik/>
+            {/*<Basics/>*/}
         </div>
     )
 }

@@ -1,10 +1,17 @@
 import {PlusIcon} from "@heroicons/react/solid";
-import {SetStateAction, useEffect, useState} from "react";
-import Rows from "./Rows";
+import {SetStateAction, useState} from "react";
+import clsx from "clsx";
 
 export default function Title() {
-    const [text, setText] = useState<string | number | readonly string[] | undefined>('');
-    const [arr, setArr] = useState<any[]>([]);
+    const [text, setText] = useState<string>('');
+    const [todos, setTodos] = useState<any>([]);
+    const [selected, setSelected] = useState(null);
+
+
+    const handleInputClick = (index: any, e: any) => {
+        setSelected(index)
+        console.log(index, selected)
+    }
 
     const handleChange = (e: any) => {
         setText(e.target.value);
@@ -12,12 +19,13 @@ export default function Title() {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        setText('');
-        if(text !==''){
-            setArr((prevState: any[]) => [...prevState, text]);
+        if (text !== '') {
+            setTodos([...todos,{text:text}]);
         }
-    }
 
+        setText('');
+    }
+    console.log(todos)
     return (
         <div className='w-full h-screen bg-slate-900'>
             <div className='max-w-[22rem] h-screen mx-auto pt-7'>
@@ -35,9 +43,19 @@ export default function Title() {
                         </button>
                     </div>
                 </form>
-                <Rows arr={arr}/>
+                <div className='mt-4'>
+                    {todos.map((todo:any, index: number) => {
+                        return (
+                            <div key={index}
+                                 className={clsx('flex items-center text-white py-2 px-4 bg-slate-700 rounded-lg mb-2 ')}>
+                                <input name='todo' className='mr-3' type="checkbox"
+                                       onClick={(e) => handleInputClick(index, e)}/>
+                                <div>{todo.text}</div>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </div>
-
     )
 }
