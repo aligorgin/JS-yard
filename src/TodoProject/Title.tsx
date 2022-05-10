@@ -1,17 +1,12 @@
 import {PlusIcon} from "@heroicons/react/solid";
-import {SetStateAction, useState} from "react";
+import {SetStateAction, useEffect, useState} from "react";
 import clsx from "clsx";
+import List from "./List";
+import useLocalStorage from "../utils/useLocalStorage";
 
 export default function Title() {
     const [text, setText] = useState<string>('');
-    const [todos, setTodos] = useState<any>([]);
-    const [selected, setSelected] = useState(null);
-
-
-    const handleInputClick = (index: any, e: any) => {
-        setSelected(index)
-        console.log(index, selected)
-    }
+    const [todos, setTodos] = useLocalStorage<any>('todos',[]);
 
     const handleChange = (e: any) => {
         setText(e.target.value);
@@ -20,12 +15,11 @@ export default function Title() {
     const handleSubmit = (e: any) => {
         e.preventDefault();
         if (text !== '') {
-            setTodos([...todos,{text:text}]);
+            setTodos([...todos, {text: text, completed: false, id: Math.random() * 1000}]);
         }
-
         setText('');
     }
-    console.log(todos)
+
     return (
         <div className='w-full h-screen bg-slate-900'>
             <div className='max-w-[22rem] h-screen mx-auto pt-7'>
@@ -43,18 +37,7 @@ export default function Title() {
                         </button>
                     </div>
                 </form>
-                <div className='mt-4'>
-                    {todos.map((todo:any, index: number) => {
-                        return (
-                            <div key={index}
-                                 className={clsx('flex items-center text-white py-2 px-4 bg-slate-700 rounded-lg mb-2 ')}>
-                                <input name='todo' className='mr-3' type="checkbox"
-                                       onClick={(e) => handleInputClick(index, e)}/>
-                                <div>{todo.text}</div>
-                            </div>
-                        )
-                    })}
-                </div>
+                <List todos={todos} setTodos={setTodos}/>
             </div>
         </div>
     )
