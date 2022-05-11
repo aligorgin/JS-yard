@@ -17,10 +17,11 @@ import PermutationsWithRep from "../algorithms/PermutationsWithRep";
 import BubbleSort from "../algorithms/BubbleSort";
 import QuickSort from "../algorithms/QuickSort";
 import MergeSort from "../algorithms/MergeSort";
-import Loops from "../codes/Loops";
-import Scope from "../codes/Scope";
+import Loops from "../training/Loops";
+import Scope from "../training/Scope";
 import AppTik from '../TodoProject/App';
-import Basics from "../codes/Basics";
+import Basics from "../training/Basics";
+import InputGoogleAnimation from "../components/InputGoogleAnimation";
 
 export default function App() {
     return (
@@ -46,8 +47,9 @@ export default function App() {
             {/*<MergeSort/>*/}
             {/*<Loops/>*/}
             {/*<Scope/>*/}
-            <AppTik/>
             {/*<Basics/>*/}
+            {/*<AppTik/>*/}
+            <InputGoogleAnimation/>
         </div>
     )
 }

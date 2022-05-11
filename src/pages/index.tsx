@@ -1,7 +1,7 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
 import Equation from "../algorithms/Equation";
-import App from "../ui/App";
+import App from "../App/App";
 
 const Home: NextPage = () => {
     return (
