@@ -22,6 +22,7 @@ import Scope from "../training/Scope";
 import AppTik from '../TodoProject/App';
 import Basics from "../training/Basics";
 import InputGoogleAnimation from "../components/InputGoogleAnimation";
+import HamburgerMenuTransition from "../components/HamburgerMenuTransition";
 
 export default function App() {
     return (
@@ -49,7 +50,8 @@ export default function App() {
             {/*<Scope/>*/}
             {/*<Basics/>*/}
             {/*<AppTik/>*/}
-            <InputGoogleAnimation/>
+            {/*<InputGoogleAnimation/>*/}
+            <HamburgerMenuTransition/>
         </div>
     )
 }

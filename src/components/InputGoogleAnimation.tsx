@@ -14,7 +14,7 @@ export default function InputGoogleAnimation() {
                 <label
                     className='peer-focus:left-[28px] absolute left-[35px] sm:left-[20px] top-1/2 text-[20px]
                     -translate-y-1/2 pointer-events-none peer-focus:text-[14px] peer-focus:top-0
-                    peer-focus:bg-slate-50 peer-focus:px-1
+                    peer-focus:bg-white peer-focus:px-1
                     transition-all duration-100 sm:peer-focus:left-[10px]'
                     htmlFor="email">
                     Email Address
