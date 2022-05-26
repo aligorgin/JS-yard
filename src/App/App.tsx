@@ -23,6 +23,7 @@ import AppTik from '../TodoProject/App';
 import Basics from "../training/Basics";
 import InputGoogleAnimation from "../components/InputGoogleAnimation";
 import HamburgerMenuTransition from "../components/HamburgerMenuTransition";
+import ShimmerEffect from "../components/ShimmerEffect";
 
 export default function App() {
     return (
@@ -51,7 +52,8 @@ export default function App() {
             {/*<Basics/>*/}
             {/*<AppTik/>*/}
             {/*<InputGoogleAnimation/>*/}
-            <HamburgerMenuTransition/>
+            {/*<HamburgerMenuTransition/>*/}
+            <ShimmerEffect/>
         </div>
     )
 }
