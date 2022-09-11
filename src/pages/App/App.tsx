@@ -26,34 +26,38 @@ import HamburgerMenuTransition from "../components/HamburgerMenuTransition";
 import ShimmerEffect from "../components/ShimmerEffect";
 
 export default function App() {
-    return (
-        <div>
-            {/*<Equation/>*/}
-            {/*<SumUp/>*/}
-            {/*<Fibonacci/>*/}
-            {/*<Prime/>*/}
-            {/*<SmallestNumber/>*/}
-            {/*<OddEven/>*/}
-            {/*<IsPowerOfTwo/>*/}
-            {/*<Factorial/>*/}
-            {/*<Permutations/>*/}
-            {/*<PermutationsWithRep/>*/}
-            {/*<KnapsackProblem/>*/}
-            {/*<ComputeChange/>*/}
-            {/*<BinarySearch/>*/}
-            {/*<LinearSearch/>*/}
-            {/*<RecursiveBinarySearch/>*/}
-            {/*<CartesianProduct/>*/}
-            {/*<BubbleSort/>*/}
-            {/*<QuickSort/>*/}
-            {/*<MergeSort/>*/}
-            {/*<Loops/>*/}
-            {/*<Scope/>*/}
-            {/*<Basics/>*/}
-            {/*<AppTik/>*/}
-            {/*<InputGoogleAnimation/>*/}
-            {/*<HamburgerMenuTransition/>*/}
-            <ShimmerEffect/>
-        </div>
-    )
+	function dude(e: any) {
+		console.log('hey')
+	}
+
+	return (
+		<div onSubmit={() => {dude}}>
+			{/*<Equation/>*/}
+			{/*<SumUp/>*/}
+			{/*<Fibonacci/>*/}
+			{/*<Prime/>*/}
+			{/*<SmallestNumber/>*/}
+			{/*<OddEven/>*/}
+			{/*<IsPowerOfTwo/>*/}
+			{/*<Factorial/>*/}
+			{/*<Permutations/>*/}
+			{/*<PermutationsWithRep/>*/}
+			{/*<KnapsackProblem/>*/}
+			{/*<ComputeChange/>*/}
+			{/*<BinarySearch/>*/}
+			{/*<LinearSearch/>*/}
+			{/*<RecursiveBinarySearch/>*/}
+			{/*<CartesianProduct/>*/}
+			{/*<BubbleSort/>*/}
+			{/*<QuickSort/>*/}
+			{/*<MergeSort/>*/}
+			{/*<Loops/>*/}
+			{/*<Scope/>*/}
+			{/*<Basics/>*/}
+			{/*<AppTik/>*/}
+			{/*<InputGoogleAnimation/>*/}
+			{/*<HamburgerMenuTransition/>*/}
+			<ShimmerEffect/>
+		</div>
+	)
 }

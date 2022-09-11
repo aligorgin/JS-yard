@@ -2,7 +2,7 @@ import {PlusIcon} from "@heroicons/react/solid";
 import {SetStateAction, useEffect, useState} from "react";
 import clsx from "clsx";
 import List from "./List";
-import useLocalStorage from "../utils/useLocalStorage";
+import useLocalStorage from "../../utils/useLocalStorage";
 
 export default function Title() {
     const [text, setText] = useState<string>('');
