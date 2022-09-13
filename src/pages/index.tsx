@@ -1,6 +1,6 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
-import Equation from "./algorithms/Equation";
+import Equation from "./Algorithms/Equation";
 import App from "./App/App";
 import Link from "next/link";
 
