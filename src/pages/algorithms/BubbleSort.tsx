@@ -5,7 +5,8 @@ export default function BubbleSort() {
 		for (let outer = 0; outer < resultArray.length; outer++) {
 			let outerEl = resultArray[outer];
 
-			for (let inner = outer + 1; inner < resultArray.length; inner++) { //O(n^2)
+			for (let inner = outer + 1; inner < resultArray.length; inner++) {
+				//O(n^2)
 				let innerEl = resultArray[inner];
 
 				if (outerEl > innerEl) {
@@ -13,20 +14,16 @@ export default function BubbleSort() {
 					resultArray[inner] = outerEl;
 
 					outerEl = resultArray[outer];
-					innerEl = resultArray[inner]
+					innerEl = resultArray[inner];
 				}
 			}
 		}
 
 		return resultArray;
-	}
+	};
 
 	const sortArr = sort([5, 2, 4, -1, 300, 421, 298, 4]);
-	console.log(sortArr)
+	console.log(sortArr);
 
-	return (
-		<div>
-			open console
-		</div>
-	)
+	return <div>open console</div>;
 }

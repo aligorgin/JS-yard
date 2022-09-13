@@ -1,10 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
-import Head from "next/head";
-import Layout from "../../component/layout";
+import Link from 'next/link';
+import Image from 'next/image';
+import Head from 'next/head';
+import Layout from '../../component/layout';
 
 export default function FirstPost() {
-
 	return (
 		<>
 			<Head>
@@ -15,9 +14,7 @@ export default function FirstPost() {
 			<h2>
 				<Link href={'/'}>Back to home</Link>
 			</h2>
-			<Layout>
-				hey test
-			</Layout>
+			<Layout>hey test</Layout>
 		</>
-	)
+	);
 }

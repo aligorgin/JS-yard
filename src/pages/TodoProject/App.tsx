@@ -1,7 +1,5 @@
-import Title from "./title";
+import Title from './title';
 
-export default function App(){
-    return(
-        <Title/>
-    )
+export default function App() {
+	return <Title />;
 }

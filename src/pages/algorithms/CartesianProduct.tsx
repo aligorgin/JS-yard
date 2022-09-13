@@ -5,21 +5,22 @@ export default function CartesianProduct() {
 			if (!Array.isArray(setAEl)) {
 				setAEl = [setAEl];
 			}
-			for (const setBEl of setB) { // O(n*m) or O(n^2)
+			for (const setBEl of setB) {
+				// O(n*m) or O(n^2)
 				product.push([...setAEl, setBEl]);
 			}
 		}
 		return product;
-	}
-
+	};
 
 	const cartesian = (...sets: any[]) => {
 		let tempProduct = sets[0];
-		for (let i = 1; i < sets.length; i++) { // O(n^x) x is sets
+		for (let i = 1; i < sets.length; i++) {
+			// O(n^x) x is sets
 			tempProduct = cartProduct(tempProduct, sets[i]);
 		}
-		return tempProduct
-	}
+		return tempProduct;
+	};
 
 	const colors = ['blue', 'red'];
 	const sizes = ['m', 'l', 'xl'];
@@ -27,9 +28,5 @@ export default function CartesianProduct() {
 	console.log(cartProduct(colors, sizes));
 	console.log(cartesian(colors, sizes, styles));
 
-	return (
-		<div>
-			open console
-		</div>
-	)
+	return <div>open console</div>;
 }

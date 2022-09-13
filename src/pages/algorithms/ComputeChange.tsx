@@ -1,5 +1,4 @@
 export default function ComputeChange() {
-
 	// time complexity without brute force = O(n)
 	// time complexity with brute force = O(n^2)
 
@@ -19,13 +18,13 @@ export default function ComputeChange() {
 		}
 
 		return calculatedChange;
-	}
+	};
 
 	const computeChangeBruteForce = (coins: number[], amount: number) => {
 		const results = [];
 
 		for (let i = 0; i < coins.length; i++) {
-			results.push(computeChange(coins.slice(i), amount))
+			results.push(computeChange(coins.slice(i), amount));
 		}
 
 		let smallestAmountOfCoins = Number.MAX_SAFE_INTEGER;
@@ -39,18 +38,13 @@ export default function ComputeChange() {
 		}
 
 		return finalResult;
-	}
+	};
 
 	const availableCoins = [8, 6, 5, 1];
 	const targetAmount = 11;
 
-
 	const change = computeChangeBruteForce(availableCoins, targetAmount);
 	console.log(change);
 
-	return (
-		<div>
-			open console
-		</div>
-	)
+	return <div>open console</div>;
 }
