@@ -307,4 +307,16 @@ export default function Basics() {
 			</div>
 		</div>
 	);
+	// js async time out example
+	async function HW() {
+		await new Promise<void>((resolve) => {
+			setTimeout(() => {
+				console.log('hello');
+				resolve();
+			}, 1000);
+		});
+		console.log('world');
+	}
+
+	HW();
 }
