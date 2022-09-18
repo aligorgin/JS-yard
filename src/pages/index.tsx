@@ -14,3 +14,17 @@ export default function Home() {
 		</Layout>
 	);
 }
+
+// js example 
+// todo : it must go under practise folder
+async function HW() {
+	await new Promise<void> (resolve => {
+		setTimeout(() => {
+			console.log('hello');
+			resolve();
+		}, 1000);
+	})
+	console.log('world');
+}
+
+HW();
