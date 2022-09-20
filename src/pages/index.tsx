@@ -12,31 +12,27 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }: any) {
-	console.log(allPostsData);
+	console.log(allPostsData[0].date);
 
 	return (
 		<Layout home>
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<div>{allPostsData[1].title}</div>
 			<section className="text-[1.2rem] leading-[1.5]">
 				<p>hey guys im ali wolfi im trying to be a better web developer and build web apps</p>
 				<p>This is a test webstite that {"i'm"} learning from next js doc</p>
 			</section>
-			<section className="text-[1.2rem] leading-[1.5] p-4">
-				<h2 className="text-[1.7rem] leading-[1.5]">blog</h2>
+			<section className="text-[1.2rem] leading-[1.5] py-4">
+				<h2 className="text-[1.7rem] leading-[1.5] mb-2">blog</h2>
 				<ul>
-					{/* {allPostsData.map(({ id, date, title }: { id: string; date: string; title: string }) => { */}
-					{allPostsData.map((data) => {
-						<li key={data.id}>
-							{data.title}
-							<br />
-							{data.id}
-							<br />
-							{data.date}
-						</li>;
-					})}
+					{allPostsData.map(({ date, id, title }: { date: string; id: string; title: string }) => (
+						<li className='mb-4' key={id}>
+							<div className='font-bold text-xl'>{title}</div>
+							<div className='text-lg font-semibold'>{id}</div>
+							{date}
+						</li>
+					))}
 				</ul>
 			</section>
 		</Layout>
