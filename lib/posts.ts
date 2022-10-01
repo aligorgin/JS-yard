@@ -36,3 +36,29 @@ export function getSortedPostsData() {
 		}
 	});
 }
+
+export function getAllPostIds() {
+	const fileNames = fs.readdirSync(postsDirectory);
+
+	// Returens an array that looks like this :
+	// [
+	// 	{
+	// 		paramas: {
+	// 			id: 'ssg-ssr'
+	// 		}
+	// 	},
+	// 	{
+	// 		paramas: {
+	// 			id: 'pre-rendering'
+	// 		}
+	// 	}
+	// ];
+
+	return fileNames.map((filename) => {
+		return {
+			params: {
+				id: filename.replace(/\.md$/, '')
+			}
+		};
+	});
+}

@@ -8,7 +8,7 @@ export const siteTitle = 'blog sample from next doc';
 
 interface Props {
 	children?: any;
-	home: boolean;
+	home?: boolean;
 }
 
 export default function Layout({ children, home }: Props) {

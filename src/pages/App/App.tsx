@@ -1,5 +1,5 @@
 import Equation from '../Algorithms/Equation';
-import SumUp from '../Algorithms/SumUp';
+import SumUp from '../Algorithms/sumup';
 import Fibonacci from '../Algorithms/Fibonacci';
 import Prime from '../Algorithms/Prime';
 import SmallestNumber from '../Algorithms/SmallestNumber';
