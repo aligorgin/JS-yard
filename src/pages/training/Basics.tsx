@@ -282,7 +282,7 @@ export default function Basics() {
 	return (
 		<div>
 			<div>
-				<button className="p-4 bg-amber-200 rounded-2xl m-2" onClick={displayName}>
+				<button className="m-2 rounded-2xl bg-amber-200 p-4" onClick={displayName}>
 					click me to show ur name{' '}
 				</button>
 				<span>{show ? 'ali ' : ''}</span>
