@@ -31,7 +31,7 @@ export default function Home({ allPostsData }: any) {
 					{allPostsData.map(({ date, id, title }: { date: string; id: string; title: string }) => (
 						<li className="mb-4" key={id}>
 							<Link href={`/posts/${id}`}>
-								<a className="text-xl font-bold text-blue-400">{title}</a>
+								<div className="text-xl font-bold text-blue-400">{title}</div>
 							</Link>
 							<br />
 							<small className="text-lg text-slate-400">

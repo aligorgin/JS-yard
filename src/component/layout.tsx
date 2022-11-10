@@ -43,7 +43,6 @@ export default function Layout({ children, home }: Props) {
 				) : (
 					<>
 						<Link href={'/'}>
-							<a>
 								<Image
 									priority
 									src={'/images/profile.jpg'}
@@ -52,11 +51,10 @@ export default function Layout({ children, home }: Props) {
 									width={108}
 									alt={name}
 								/>
-							</a>
 						</Link>
 						<h2 className="my-4 mx-0 text-[1.5rem] leading-[1.4]">
 							<Link href={'/'}>
-								<a className="text-inherit">{name}</a>
+								<div className="text-inherit">{name}</div>
 							</Link>
 						</h2>
 					</>

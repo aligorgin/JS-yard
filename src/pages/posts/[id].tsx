@@ -21,6 +21,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }: any) {
+
 	return (
 		<Layout>
 			<Head>

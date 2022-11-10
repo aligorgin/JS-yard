@@ -153,6 +153,9 @@ export default function Basics() {
 		return uniqueArrWithSet;
 	};
 
+	const foo = ['1','2','3']
+	console.log(foo.indexOf('1'));
+	
 	// promises
 	// const promise1 = Promise.resolve('hello');
 	// let promise2 = promise1.then((result) => {
